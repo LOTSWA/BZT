@@ -44,12 +44,12 @@ public class CharacterManager {
 			{
 				if (characters[i].name != name || characters[i].health != health || characters[i].power != power)
 				{
-					return false;
+					characters[i].name = name;
+					characters[i].health = health;
+					characters[i].power = power;
+					return true;
 				}
-				characters[i].name = name;
-				characters[i].health = health;
-				characters[i].power = power;
-				return true;
+				return false;
 			}
 		}
 		return false;
