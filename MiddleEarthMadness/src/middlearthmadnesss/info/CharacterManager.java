@@ -16,7 +16,10 @@ public class CharacterManager {
 		if (size == characters.length)
 		{
 			MiddleEarthCharacter[] temp = new MiddleEarthCharacter[characters.length * 2];
-			
+			System.arraycopy(characters, 0, temp, 0, characters.length);
+			characters = temp;
 		}
+		characters[size++] = c;
+		return true;
 	}
 }
