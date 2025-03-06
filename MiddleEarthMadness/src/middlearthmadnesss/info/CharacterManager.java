@@ -42,4 +42,18 @@ public class CharacterManager {
 		return false;
 	}
 	
+	public boolean deleteCharacter(MiddleEarthCharacter character)
+	{
+		for (int i = 0; i < size; i++)
+		{
+			if (characters[i].equals(character))
+			{
+				System.arraycopy(characters, i + 1, characters, i, size - 1 - i);
+				size --;
+				return true;
+			}
+		}
+		return false;
+	}
+	
 }
