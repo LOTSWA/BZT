@@ -24,6 +24,18 @@ public class CharacterManager {
 		return true;
 	}
 	
+	public MiddleEarthCharacter getCharacter(String name)
+	{
+		for (int i = 0; i < size; i++)
+		{
+			if (characters[i].name == name)
+			{
+				return characters[i];
+			}
+		}
+		return null;
+	}
+	
 	public boolean updateCharacter(MiddleEarthCharacter character, String name, int health, int power)
 	{
 		for (int i = 0; i < size; i++)
